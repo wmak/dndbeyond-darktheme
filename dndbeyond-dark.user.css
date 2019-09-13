@@ -11,7 +11,7 @@
 @var color borderColor "Border Color" #ff0000
 @var color proficiencyColor "Proficiency Color" #ffa600
 ==/UserStyle== */
-@-moz-document domain("dndbeyond.com") {
+@-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*") {
     :root {
         --secondary-color: /*[[secondaryColor]]*/;
     }
