@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Dark
 @namespace    wmak
-@version      1.0.1
+@version      1.0.2
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
@@ -23,7 +23,18 @@
         !important;
         border-color: /*[[borderColor]]*/
     }
-    
+
+    .character-checkbox-input,
+    .ct-slot-manager__slot {
+        background-color: /*[[baseColor]]*/;
+        box-shadow: inset 0 0 4px 0 /*[[secondaryColor]]*/;
+        border: 1px solid /*[[fontColor]]*/;
+    }
+
+    .ct-slot-manager__slot::before {
+        background-color: /*[[borderColor]]*/;
+    }
+
     a,
     a:visited,
     .ct-content-group__header-content,
@@ -39,7 +50,7 @@
     .ct-tab-options--layout-pill .ct-tab-options__header-heading--active {
         background-color: /*[[borderColor]]*/;
     }
-    
+
     .ct-number-bar__option:hover,
     .site .ct-theme-button--outline.ct-button:hover,
     .site .ct-theme-button--filled.ct-button:hover,
