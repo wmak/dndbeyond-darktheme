@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Dark
 @namespace    wmak
-@version      1.0.0
+@version      1.0.1
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
@@ -12,10 +12,7 @@
 @var color proficiencyColor "Proficiency Color" #ffa600
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*") {
-    :root {
-        --secondary-color: /*[[secondaryColor]]*/;
-    }
-
+    .ct-quick-nav__button,
     .ct-status-summary-mobile__health,
     .ct-character-header-desktop__button,
     .ct-character-header-tablet__button,
@@ -26,23 +23,51 @@
         !important;
         border-color: /*[[borderColor]]*/
     }
+    
+    a,
+    a:visited,
+    .ct-content-group__header-content,
+    .ct-class-detail__name,
+    .site .ct-theme-link,
+    .ct-actions-list__heading {
+        color: /*[[borderColor]]*/
+    }
 
+    .site .ct-theme-button--filled.ct-button,
+    .ct-quick-nav__edge-toggle,
+    .ct-quick-nav__toggle,
     .ct-tab-options--layout-pill .ct-tab-options__header-heading--active {
         background-color: /*[[borderColor]]*/;
     }
+    
+    .ct-number-bar__option:hover,
+    .site .ct-theme-button--outline.ct-button:hover,
+    .site .ct-theme-button--filled.ct-button:hover,
+    .ct-tab-options--layout-pill .ct-tab-options__header-heading:hover {
+        background-color: /*[[baseColor]]*/;
+        box-shadow: 0 0 10px 2px /*[[borderColor]]*/ inset;
+    }
 
+    .ct-collapsible__header,
     .ct-tablet-box__header,
     .ct-tablet-box__inner,
     .ct-sidebar__pane-content {
         background: /*[[secondaryColor]]*/;
     }
 
+    input[type=number],
+    .ct-ability-score-manager__component-value,
     .ct-character-sheet:before,
     body.body-rpgcharacter-sheet {
         background: /*[[baseColor]]*/
         !important;
+        color: /*[[fontColor]]*/;
     }
-
+    
+    input[type=number] {
+        border: 1px solid /*[[borderColor]]*/
+    }
+    
     .ct-proficiency-bonus-box__heading,
     .ct-ability-summary__abbr,
     .ct-ability-summary__label,
@@ -53,13 +78,30 @@
     div {
         color: /*[[fontColor]]*/;
     }
+   
+    .ct-character-tidbits__menu-status--closed::before, .ct-character-tidbits__menu-status--opened::before {
+        border-top-color: /*[[borderColor]]*/
+    }
 
+    .body-rpgcharacter-sheet .site-bar,
     .ct-tab-list__nav-item--active,
     .ct-character-tidbits__avatar {
         border-color: /*[[borderColor]]*/
     }
     
+    .ct-number-bar__option,
+    .ct-collapsible--opened > .ct-collapsible__header {
+        background: /*[[baseColor]]*/;
+        border-color: /*[[borderColor]]*/
+    }
+    
+    .ct-number-bar__option--implied,
+    .ct-number-bar__option--active{
+        background: /*[[borderColor]]*/
+    }
+    
     .ct-sidebar__pane-gap,
+    .site .ct-theme-button--outline.ct-button,
     .ct-tablet-box__border,
     .ct-sidebar__pane-content {
         background: /*[[secondaryColor]]*/;
@@ -162,6 +204,9 @@
     }
 
     .ct-mobile-divider__repeat {
+        height: 17.5px;
+        background-size: auto 17.5px;
+        background-repeat: repeat space;
         background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.625 10.27083'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:/*[[borderColor]]*/;%7D.cls-2%7Bfill:/*[[secondaryColor]]*/;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M127.99,5.29V364.56l-5.01,5.02H-106.41l-5.01-5.02V5.29l5.01-5.01H122.98Zm-1.37,354.09V10.51a10.73922,10.73922,0,0,0-4.31-6.3H-105.77a10.50987,10.50987,0,0,0-4.28,6.27V359.35a10.67983,10.67983,0,0,0,4.3,6.3H122.34A10.58242,10.58242,0,0,0,126.62,359.38ZM-104.58,3.46H121.13a17.19832,17.19832,0,0,0-4.87-1.8h-216a17.50959,17.50959,0,0,0-3.94,1.3C-104,3.11-104.29,3.29-104.58,3.46Z'/%3E%3Cpath class='cls-2' d='M126.62,10.51V359.38a10.58242,10.58242,0,0,1-4.28,6.27H-105.75a10.67983,10.67983,0,0,1-4.3-6.3V10.48a10.50987,10.50987,0,0,1,4.28-6.27H122.31A10.73922,10.73922,0,0,1,126.62,10.51Z'/%3E%3C/svg%3E%0A");
     }
 }
