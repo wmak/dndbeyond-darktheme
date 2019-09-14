@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Dark
 @namespace    wmak
-@version      1.0.3
+@version      1.0.4
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
@@ -12,6 +12,7 @@
 @var color highlightColor "Highlight Color" #ffa600
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*") {
+
     .ct-quick-nav__button,
     .ct-status-summary-mobile__health,
     .ct-character-header-desktop__button,
@@ -50,7 +51,13 @@
     .ct-quick-nav__edge-toggle,
     .ct-quick-nav__toggle,
     .ct-tab-options--layout-pill .ct-tab-options__header-heading--active {
-        background-color: /*[[borderColor]]*/;
+        background-color: /*[[borderColor]]*/ !important;
+        color: /*[[fontColor]]*/ !important;
+    }
+    
+    .ct-tab-options__header-heading {
+        background-color: /*[[fontColor]]*/ !important;
+        color: /*[[borderColor]]*/ !important;
     }
 
     .ct-number-bar__option:hover,
@@ -76,13 +83,14 @@
         background: /*[[secondaryColor]]*/;
     }
 
-    input[type=number],
+    .ct-spells-filter__box,
+    .ct-extras-filter__box,
+    input,
     .ct-ability-score-manager__component-value,
     .ct-character-sheet:before,
     body.body-rpgcharacter-sheet {
-        background: /*[[baseColor]]*/
-        !important;
-        color: /*[[fontColor]]*/;
+        background: /*[[baseColor]]*/ !important;
+        color: /*[[fontColor]]*/ !important;
     }
     
     input[type=number] {
@@ -97,7 +105,7 @@
     .ct-item-name--rarity-common,
     span,
     div {
-        color: /*[[fontColor]]*/;
+        color: /*[[fontColor]]*/ !important;
     }
    
     .ct-character-tidbits__menu-status--closed::before, .ct-character-tidbits__menu-status--opened::before {
