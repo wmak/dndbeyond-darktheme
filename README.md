@@ -1,7 +1,7 @@
 # dndbeyond-darktheme
 Custom css theme for dndbeyond Character Sheets
 
-![Sample Video](https://media.giphy.com/media/W2QXR1pc3S0BAdDAoI/giphy.gif)
+![Sample Video](./preview.png)
 
 # To Install
 For Chrome install [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
