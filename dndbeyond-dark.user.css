@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Dark
 @namespace    wmak
-@version      1.0.6
+@version      1.0.7
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
@@ -76,8 +76,7 @@
     .site .ct-theme-button--outline.ct-button:hover,
     .site .ct-theme-button--filled.ct-button:hover,
     .ct-tab-options--layout-pill .ct-tab-options__header-heading:hover {
-        background-color: /*[[baseColor]]*/;
-        box-shadow: 0 0 10px 2px /*[[borderColor]]*/ inset;
+        background-color: /*[[baseColor]]*/ !important;
     }
     
     .ct-spells-spell__scaled-level {
@@ -127,6 +126,7 @@
     
     .ct-no-proficiency-icon {
         background-color: /*[[secondaryColor]]*/;
+        border: 1px dotted /*[[fontColor]]*/;
     }
    
     .ct-character-tidbits__menu-status--closed::before, .ct-character-tidbits__menu-status--opened::before {
