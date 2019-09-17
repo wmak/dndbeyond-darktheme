@@ -4,7 +4,9 @@ Custom css theme for dndbeyond Character Sheets
 ![Sample Image](./preview.png)
 
 # To Install
-For Chrome install [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
+For Chrome install [Stylus here](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
+
+For Firefox install [Stylus here](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
 
 Open the usercss theme [here](https://github.com/wmak/dndbeyond-darktheme/raw/master/dndbeyond-dark.user.css)
 
