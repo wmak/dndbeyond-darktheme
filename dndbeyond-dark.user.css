@@ -5,6 +5,7 @@
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
+@var text backgroundUrl "Background Image URL" ""
 @var color baseColor "Base Color" #2d2d2d
 @var color fontColor "Font Color" #fff2f2
 @var color secondaryColor "Secondary Color" #1e0505
@@ -99,10 +100,14 @@
     .ct-inventory-filter__box,
     input[type=number],
     .ct-ability-score-manager__component-value,
-    .ct-character-sheet:before,
-    body.body-rpgcharacter-sheet {
+    .ct-character-sheet:before {
         background: /*[[baseColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
+    }
+    
+    body.body-rpgcharacter-sheet {
+        background: url(/*[[backgroundUrl]]*/) no-repeat center center fixed, url() /*[[baseColor]]*/ !important; 
+        background-size: cover !important;
     }
     
     input[type=number] {
