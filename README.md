@@ -19,6 +19,12 @@ Open the usercss theme [here](https://github.com/wmak/dndbeyond-darktheme/raw/ma
     
 ![Demo](https://media.giphy.com/media/ckwgmQJvVcMZfqfdQM/giphy.gif)
 
+## Background Url
+- This changes the background of the character sheet
+- Leave this blank for a plain background
+
+![Background Url](https://media.giphy.com/media/IaWeLSSrtasg1Ug2l4/giphy.gif)
+
 ## Base Color
 - This changes the background of your character sheet
 
