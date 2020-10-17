@@ -221,11 +221,16 @@
 
     .ddbc-ability-score-box-svg path:nth-child(1),
     .ddbc-ability-score-box-svg path:nth-child(2),
+    .ddbc-ability-summary path:nth-child(2),
     .ddbc-box-background path:nth-child(1),
     .ddbc-box-background polygon:nth-child(1) {
         fill: /*[[secondaryColor]]*/
+        !important;
     }
 
+    #InspirationBoxSvg-Fill-2,
+    .ddbc-ability-summary path:nth-child(3),
+    .ddbc-box-background path:nth-child(2),
     .ddbc-proficiency-svg circle {
         fill: /*[[highlightColor]]*/
     }
