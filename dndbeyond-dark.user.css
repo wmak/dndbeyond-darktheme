@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Dark
 @namespace    wmak
-@version      1.0.9
+@version      1.0.10
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
@@ -30,8 +30,9 @@
     .ct-character-header-desktop__button,
     .ct-character-header-tablet__button,
     .ct-status-summary-mobile__button,
+    .ddbc-tab-options__header-heading .ddbc-campaign-summary,
     .ct-campaign-summary,
-    .ct-spell-manager__spell > .ct-collapsible__content,
+    .ct-sidebar__pane-content .ddbc-collapsible__header,
     .ct-combat-tablet__cta-button {
         background-color: /*[[secondaryColor]]*/
         !important;
@@ -65,6 +66,7 @@
     .site .ct-theme-button--filled.ct-button,
     .ct-quick-nav__edge-toggle,
     .ct-quick-nav__toggle,
+    .ddbc-tab-options__header .ddbc-tab-options__header-heading--is-active,
     .ct-tab-options--layout-pill .ct-tab-options__header-heading--active {
         background-color: /*[[borderColor]]*/
         !important;
@@ -72,9 +74,8 @@
         !important;
     }
 
+    .ddbc-tab-options__header-heading,
     .ct-tab-options__header-heading {
-        background-color: /*[[fontColor]]*/
-        !important;
         color: /*[[borderColor]]*/
         !important;
     }
@@ -108,6 +109,7 @@
     .ct-extras-filter__box,
     .ct-inventory-filter__box,
     input[type=number],
+    input[type=search],
     .ct-ability-score-manager__component-value,
     .ct-character-sheet:before {
         background: /*[[baseColor]]*/
@@ -130,17 +132,28 @@
         background: /*[[secondaryColor]]*/;
     }
 
-    .ct-proficiency-bonus-box__heading,
-    .ct-ability-summary__abbr,
-    .ct-ability-summary__label,
-    .ct-proficiency-bonus-box__value,
-    .ct-ability-summary__primary,
-    .ct-item-name--rarity-common,
-    span,
-    div {
-        color: /*[[fontColor]]*/;
+    .integrated-dice__container:hover {
+        background: /*[[borderColor]]*/
+        !important;
     }
 
+    .ct-proficiency-bonus-box__heading,
+    .ct-ability-summary__abbr,
+    .ct-speed-box__heading,
+    .ddbc-distance-number__label,
+    .ddbc-signed-number__sign,
+    .ddbc-ability-summary__label,
+    .ddbc-proficiency-bonus-box__value,
+    .ddbc-ability-summary__primary,
+    .ddbc-item-name--rarity-common,
+    .integrated-dice__container,
+    span,
+    div {
+        color: /*[[fontColor]]*/
+        !important;
+    }
+
+    .ddbc-no-proficiency-icon,
     .ct-no-proficiency-icon {
         background-color: /*[[secondaryColor]]*/;
         border: 1px dotted/*[[fontColor]]*/;
@@ -206,35 +219,14 @@
         color: #000 !important;
     }
 
-    .ddbc-box-background path:nth-child(2),
-    .ddbc-ability-score-box-svg path:nth-child(3),
-    .ddbc-inspiration-box-svg path,
-    .ddbc-inspiration-token-svg path {
-        fill: /*[[borderColor]]*/
-    }
-
-    .ddbc-box-background path:first-child,
-    .ddbc-box-background polygon:first-child,
-    .ddbc-ability-score-box-svg path:nth-child(2) {
+    .ddbc-ability-score-box-svg path:nth-child(1),
+    .ddbc-ability-score-box-svg path:nth-child(2),
+    .ddbc-box-background path:nth-child(1),
+    .ddbc-box-background polygon:nth-child(1) {
         fill: /*[[secondaryColor]]*/
     }
 
-
-    .sync-blocker-anim,
-    .ct-equipment-shop__loading-icon,
-    .ct-spell-manager__loading-icon,
-    .spell-manager-loading-icon,
-    .starting-equipment-loading-icon,
-    .equipment-manager-shop-loading-icon,
-    .ct-backdrop-pane .LazyLoad,
-    .ct-frame-pane .LazyLoad,
-    .ct-avatar-pane .LazyLoad,
-    .avatar-manager-list .LazyLoad,
-    .ct-theme-pane .LazyLoad,
-    .sync-blocker-anim,
-    .filter-listing-loading-icon,
-    .ct-extra-manage-pane__loading-icon,
-    .ct-loading-blocker__anim {
-        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='100px' height='100px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='uil-ring-alt'%3E%3Crect x='0' y='0' width='100' height='100' fill='none' class='bk'%3E%3C/rect%3E%3Ccircle cx='50' cy='50' r='40' stroke='%23131315' fill='none' stroke-width='10' stroke-linecap='round'%3E%3C/circle%3E%3Ccircle cx='50' cy='50' r='40' stroke='/*[[borderColor]]*/' fill='none' stroke-width='6' stroke-linecap='round'%3E%3Canimate attributeName='stroke-dashoffset' dur='2s' repeatCount='indefinite' from='0' to='502'%3E%3C/animate%3E%3Canimate attributeName='stroke-dasharray' dur='2s' repeatCount='indefinite' values='150.6 100.4;1 250;150.6 100.4'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E");
+    .ddbc-proficiency-svg circle {
+        fill: /*[[highlightColor]]*/
     }
 }
