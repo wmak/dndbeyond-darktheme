@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Dark
 @namespace    wmak
-@version      1.0.11
+@version      1.0.12
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
@@ -31,6 +31,7 @@
     .ct-character-header-tablet__button,
     .ct-status-summary-mobile__button,
     .ddbc-tab-options__header-heading .ddbc-campaign-summary,
+    .ddbc-collapsible__content,
     .ct-campaign-summary,
     .ct-sidebar__pane-content .ddbc-collapsible__header,
     .ct-combat-tablet__cta-button {
@@ -111,6 +112,10 @@
     input[type=number],
     input[type=search],
     .ct-ability-score-manager__component-value,
+    blockquote,
+    .ct-sidebar thead td, .ct-sidebar thead th,
+    .ct-sidebar .compendium-left-aligned-table td,
+    .ct-sidebar .summoning-creatures-table td,
     .ct-character-sheet:before {
         background: /*[[baseColor]]*/
         !important;
