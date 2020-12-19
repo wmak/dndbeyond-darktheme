@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Dark
 @namespace    wmak
-@version      1.0.12
+@version      1.0.13
 @preprocessor uso
 @homepageURL  https://github.com/wmak/dndbeyond-darktheme
 @author       wmak
@@ -14,6 +14,8 @@
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*") {
     .ct-mobile-divider__label,
+    .ddbc-character-avatar__portrait,
+    .ddbc-campaign-summary,
     .ct-main-mobile .ct-senses,
     .ct-skills-mobile .ct-skills,
     .ct-actions-mobile .ct-tab-options,
@@ -40,20 +42,33 @@
         border-color: /*[[borderColor]]*/
     }
 
+    .ct-sidebar tr:nth-child(2n+1) td {
+        background: /*[[baseColor]]*/
+    }
+    .ct-sidebar td {
+        background: /*[[secondaryColor]]*/
+    }
+    
     .character-checkbox-input,
     .ct-item-detail__tag,
     .ct-spell-detail__tag,
     .ct-slot-manager__slot {
         background-color: /*[[baseColor]]*/;
-        box-shadow: inset 0 0 4px 0/*[[secondaryColor]]*/;
+        box-shadow: inset 0 0 4px 0/*[[highlightColor]]*/;
         border: 1px solid/*[[fontColor]]*/;
     }
 
     .ct-slot-manager__slot::before {
         background-color: /*[[borderColor]]*/;
     }
+    
+    .site .ddbc-theme-link,
+    a {
+        color: /*[[highlightColor]]*/
+    }
 
-    a,
+    .site .ddbc-theme-link:hover,
+    a:hover,
     a:visited,
     .ct-spells-spell__as-ritual,
     .ct-spells-spell__at-will,
@@ -62,6 +77,11 @@
     .site .ct-theme-link,
     .ct-actions-list__heading {
         color: /*[[borderColor]]*/
+    }
+    
+    .ddbc-creature-block div,
+    .ddbc-creature-block span {
+        color: /*[[baseColor]]*/ !important;
     }
 
     .site .ct-theme-button--filled.ct-button,
@@ -219,9 +239,17 @@
         color: #ff8d8d
     }
 
+    .ddbc-tab-list__nav-item--is-active {
+        border-bottom-color: /*[[highlightColor]]*/
+    }
+
     .ct-creature-block div,
     .ct-creature-block span {
         color: #000 !important;
+    }
+
+    svg.ddbc-proficiency-icon circle {
+        fill: /*[[highlightColor]]*/
     }
 
     .ddbc-ability-score-box-svg path:nth-child(1),
@@ -233,11 +261,28 @@
         !important;
     }
 
+    .ddbc-sidebar-cap-svg path,
+    .ddbc-long-rest-svg ellipse {
+        stroke: /*[[borderColor]]*/
+    }
+    
+    .ddbc-sidebar-cap-svg path:nth-child(1) {
+        fill: /*[[secondaryColor]]*/
+    }
+    
+    .ddbc-sidebar-cap-svg path:nth-child(9) {
+        fill: /*[[highlightColor]]*/
+    }
+
+    .ddbc-short-rest-svg path,
+    .ddbc-share-svg path,
+    .ddbc-long-rest-svg path,
+    .ddbc-attunement-slot-box-svg path,
     #InspirationBoxSvg-Fill-2,
     .ddbc-ability-summary path:nth-child(3),
     .ddbc-box-background path:nth-child(2),
     .ddbc-proficiency-svg circle {
-        fill: /*[[highlightColor]]*/
+        fill: /*[[borderColor]]*/
     }
 
     /* Icons */
